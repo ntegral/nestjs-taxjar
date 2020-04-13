@@ -11,6 +11,10 @@
   "description": "Provides an injectable taxjar client to provide features to the TaxJar API for nestjs projects",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ntegral/nestjs-taxjar"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "clean": "rm -rf dist",
