@@ -1,0 +1,61 @@
+{
+  "contributors": [
+    {
+      "name": "Dexter Hardy",
+      "email": "dexter.hardy@ntegral.com",
+      "url": "http://www.ntegral.com"
+    }
+  ],
+  "name": "@ntegral/nestjs-taxjar",
+  "version": "1.0.0",
+  "description": "Provides an injectable taxjar client to provide features to the TaxJar API for nestjs projects",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "rm -rf dist",
+    "format": "prettier --write \"lib/**/*.ts\"",
+    "publish:npm": "npm publish --access public",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand"
+  },
+  "keywords": [
+    "nestjs",
+    "taxjar",
+    "node"
+  ],
+  "author": "Dexter Hardy",
+  "license": "ISC",
+  "devDependencies": {
+    "@nestjs/common": "^7.0.7",
+    "@nestjs/core": "^7.0.7",
+    "@nestjs/testing": "^7.0.7",
+    "@types/jest": "^25.2.1",
+    "jest": "^25.3.0",
+    "prettier": "^2.0.4",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.5",
+    "ts-jest": "^25.3.1",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^3.8.3"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "lib",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  },
+  "dependencies": {
+    "taxjar": "^3.2.0"
+  }
+}
